@@ -327,12 +327,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         f_caption=f_caption
                 if f_caption is None:
                     f_caption = f"{title}"
-                buttons = [
-                    [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
-                    ]
-                    ]
-                
+         
+            
+       
                 await query.answer()
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
@@ -345,4 +342,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
+        await query.answer("ഇനി ഒന്നും ഇല്ല..🚀 കൗതുകം ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
